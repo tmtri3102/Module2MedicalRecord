@@ -1,6 +1,8 @@
+package view;
 
+import controller.RecordController;
+import model.BenhAn;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,12 +12,8 @@ public class Main {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        AddBenhAn addController = new AddBenhAn();
-        DeleteBenhAn deleteController = new DeleteBenhAn(scanner);
-        DisplayBenhAn displayController = new DisplayBenhAn();
-
-        boolean running = true;
-        while (running) {
+        RecordController recordController = new RecordController();
+        while (true) {
             System.out.println("CHUONG TRINH QUAN LY BENH AN");
             System.out.println("Chon chuc nang theo so :");
             System.out.println("1. Them benh an");
@@ -28,17 +26,17 @@ public class Main {
 
             switch (choice) {
                 case 1:
-                    addController.addBenhAn();
+                    recordController.add();
                     break;
                 case 2:
-                    deleteController.deleteBenhAn(benhAnList);
+                    recordController.delete();
                     break;
                 case 3:
-                    displayController.displayBenhAnList(benhAnList);
+                    recordController.showRecords();
                     break;
                 case 4:
-                    running = false;
-                    break;
+                    System.out.println("Thoát chương trình!");
+                    System.exit(0);
                 default:
                     System.out.println("Lua chon khong hop le.");
                     break;

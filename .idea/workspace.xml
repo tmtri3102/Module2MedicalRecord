@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507f46c6-2444-4110-a193-f64ab0fb2797" name="Changes" comment="First commit">
-      <change afterPath="$PROJECT_DIR$/src/AddBenhAn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BenhAn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BenhAnThuong.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BenhAnVip.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    <list default="true" id="507f46c6-2444-4110-a193-f64ab0fb2797" name="Changes" comment="Final commit (fail Add Benh An)">
+      <change afterPath="$PROJECT_DIR$/data/medical_records.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controller/RecordController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/IRecordStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/storage/RecordStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddBenhAn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BenhAn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BenhAn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BenhAnThuong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BenhAnThuong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BenhAnVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BenhAnVIP.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DeleteBenhAn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DisplayBenhAn.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,42 +33,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "tmtri3102"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tmtri3102&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/tmtri3102/Module2MedicalRecord.git",
-    "accountId": "14a988b1-8e4c-4c64-8719-30742550686c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tmtri3102/Module2MedicalRecord.git&quot;,
+    &quot;accountId&quot;: &quot;14a988b1-8e4c-4c64-8719-30742550686c&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2oorUEa7aVkrTwamMgm0fR7VzHT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -78,7 +86,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731546782842</updated>
-      <workItem from="1731546783856" duration="6770000" />
+      <workItem from="1731546783856" duration="8008000" />
+      <workItem from="1731568423837" duration="427000" />
+      <workItem from="1731568898966" duration="3175000" />
+      <workItem from="1731572544012" duration="6314000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -88,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731549683680</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Second commit">
+      <option name="closed" value="true" />
+      <created>1731556559252</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731556559252</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
+    <MESSAGE value="Second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
 </project>
