@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="507f46c6-2444-4110-a193-f64ab0fb2797" name="Changes" comment="Final commit (fail Add Benh An)">
-      <change afterPath="$PROJECT_DIR$/data/medical_records.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/RecordController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/IRecordStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/storage/RecordStorage.java" afterDir="false" />
+    <list default="true" id="507f46c6-2444-4110-a193-f64ab0fb2797" name="Changes" comment="Final commit (UnsupportedOperationException)">
+      <change afterPath="$PROJECT_DIR$/src/controller/DuplicateMedicalRecordException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddBenhAn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BenhAn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BenhAn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BenhAnThuong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BenhAnThuong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BenhAnVip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BenhAnVIP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DeleteBenhAn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DisplayBenhAn.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/RecordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/RecordController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +80,7 @@
       <workItem from="1731546783856" duration="8008000" />
       <workItem from="1731568423837" duration="427000" />
       <workItem from="1731568898966" duration="3175000" />
-      <workItem from="1731572544012" duration="6314000" />
+      <workItem from="1731572544012" duration="8775000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <option name="closed" value="true" />
@@ -107,7 +98,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731556559252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Final commit (UnsupportedOperationException)">
+      <option name="closed" value="true" />
+      <created>1731579097675</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731579097675</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +115,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First commit" />
     <MESSAGE value="Second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
+    <MESSAGE value="Final commit (UnsupportedOperationException)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final commit (UnsupportedOperationException)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.UnsupportedOperationException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

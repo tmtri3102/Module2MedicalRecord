@@ -59,7 +59,7 @@ public class RecordController {
                         }
                     }
                     if (codeExists) {
-                        System.out.println("Bệnh án đã tồn tại!");
+                        throw new DuplicateMedicalRecordException("Benh an da ton tai");
                     } else {
                         recordCodeMatch = true;
                         benhAn.setRecordCode(recordCode);
@@ -72,7 +72,7 @@ public class RecordController {
             // input mã bệnh nhân
             boolean patientCodeMatch = false;
             while (!patientCodeMatch) {
-                System.out.print("Nhập mã bệnh nhân: ");
+                System.out.print("Nhập mã bệnh nhân (BN-XXX): ");
                 String patientCode = scanner.nextLine();
 
                 Pattern patientCodePattern = Pattern.compile("^BN-[0-9]{3}$");
@@ -87,9 +87,23 @@ public class RecordController {
             }
 
             // input tên bệnh nhân
-            System.out.print("Nhập tên bệnh nhân: ");
-            String patientName = scanner.nextLine();
-            benhAn.setName(patientName);
+            boolean nameCodeMatch = false;
+            while (!nameCodeMatch) {
+                System.out.print("Nhập tên bệnh nhân: ");
+                String nameCode = scanner.nextLine();
+
+                Pattern nameCodePattern = Pattern.compile("^[A-Z][a-zA-Z\\s]*$");
+                Matcher matcher = nameCodePattern.matcher(nameCode);
+
+                if (matcher.matches()) {
+                    nameCodeMatch = true;
+                    benhAn.setName(nameCode);
+                }
+                else {
+                    System.out.println("Chỉ chữ cái và khoảng trắng. Chữ cái đầu tên viết hoa.");
+                }
+
+            }
 
             // input ngày nhập viện
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -127,16 +141,31 @@ public class RecordController {
 
 
             // input lý do nhập viện
-            System.out.print("Lý do nhập viện: ");
-            String reason = scanner.nextLine();
-            benhAn.setReason(reason);
+            boolean reasonCodeMatch = false;
+            while (!reasonCodeMatch) {
+                System.out.print("Lý do nhập viện: ");
+                String reason = scanner.nextLine();
+
+                Pattern reasonCodePattern = Pattern.compile("^[A-Z][a-zA-Z\\s]*$");
+                Matcher matcher = reasonCodePattern.matcher(reason);
+
+                if (matcher.matches()) {
+                    reasonCodeMatch = true;
+                    benhAn.setReason(reason);
+                }
+                else {
+                    System.out.println("Chỉ chữ cái và khoảng trắng. Chữ cái đầu tên viết hoa.");
+                }
+
+            }
 
             // input theo loại bệnh nhân
             if (benhAn instanceof BenhAnThuong) {
                 System.out.print("Nhập phí nằm viện: ");
-                double cost = scanner.nextDouble();
+                double fee = scanner.nextDouble();
                 scanner.nextLine();
-                ((BenhAnThuong) benhAn).setCost(cost);
+                ((BenhAnThuong) benhAn).setCost(fee);
+
             } else {
                 System.out.println("Chọn loại VIP: ");
                 System.out.println("1. VIP I");
